@@ -22,8 +22,8 @@ runs:
   steps:
     - name: Prepare SDK Info
       id: sdk-info
-      run: $GITHUB_ACTION_PATH/scripts/sdk-info.sh
       shell: bash
+      run: $GITHUB_ACTION_PATH/scripts/sdk-info.sh
       if: inputs.refresh == 'true'
       env:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
@@ -34,7 +34,6 @@ runs:
         
     - name: Install Android SDK for Swift
       id: parse-inputs
-      run: $GITHUB_ACTION_PATH/scripts/parse-inputs.sh
       shell: bash
       run: swift sdk install "$SDK_URL" --checksum "$SDK_CHECKSUM"
       env:
@@ -44,8 +43,8 @@ runs:
       
     # Android NDK is pre-installed on runner image, we just need to run the SDK setup script to link it.
     - name: Setup Android SDK for Swift
-      run: $GITHUB_ACTION_PATH/scripts/setup-sdk.sh
       shell: bash
+      run: $GITHUB_ACTION_PATH/scripts/setup-sdk.sh
       env:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
         SDK_ID: ${{ steps.sdk-info.outputs.sdk-url }}
