@@ -27,6 +27,7 @@ jobs:
     env:
       TARGET_TRIPLE: aarch64-unknown-linux-android28
     steps:
+    - uses: actions/checkout@main
     - uses: orchetect/setup-swift-android-sdk@v1
       with:
         target-triple: {{ $env.TARGET_TRIPLE }}
