@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # swift-ver.sh
 # setup-swift-android-sdk • https://github.com/orchetect/setup-swift-android-sdk
@@ -14,7 +14,7 @@
 SWIFT_VERSION_COMMAND_OUTPUT=$(swift --version)
 SWIFT_VERSION_REGEX="m/.*Swift\sversion\s([\d\.]{3,8})\s\((.+)\)/g"
 SWIFT_VERSION=$(echo "${SWIFT_VERSION_COMMAND_OUTPUT}" | perl -nle 'if ('$SWIFT_VERSION_REGEX') { ($short, $long) = ($1, $2); print "${short}"; }')
-if [[ -z $SWIFT_VERSION ]]; then echo "⛔️ Error: Could not determine Swift version."; exit 1; fi
+if [ -z $SWIFT_VERSION ]; then echo "⛔️ Error: Could not determine Swift version."; exit 1; fi
 
 # Output diagnostic info.
 echo "Swift version: $SWIFT_VERSION"

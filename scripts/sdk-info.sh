@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # sdk-info.sh
 # setup-swift-android-sdk • https://github.com/orchetect/setup-swift-android-sdk
@@ -13,7 +13,7 @@
 # - sdk-checksum     SDK checksum
 
 # Validate Swift version
-if [[ -z $SWIFT_VERSION ]]; then echo "⛔️ Error: Swift version is empty."; exit 1; fi
+if [ -z $SWIFT_VERSION ]; then echo "⛔️ Error: Swift version is empty."; exit 1; fi
 
 # Output diagnostic info.
 echo "Using Swift version $SWIFT_VERSION"
