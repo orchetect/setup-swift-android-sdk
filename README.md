@@ -30,7 +30,7 @@ jobs:
     - uses: actions/checkout@main
     - uses: orchetect/setup-swift-android-sdk@v1
       with:
-        target-triple: {{ $env.TARGET_TRIPLE }}
+        target-triple: ${{ env.TARGET_TRIPLE }}
     - name: Build Package
     - run: swift build --swift-sdk "$TARGET_TRIPLE" --static-swift-stdlib
 ```
