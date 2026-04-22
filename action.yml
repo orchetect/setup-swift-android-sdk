@@ -55,7 +55,7 @@ runs:
       run: $GITHUB_ACTION_PATH/scripts/setup-sdk.sh
       env:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
-        SDK_ID: ${{ steps.sdk-info.outputs.sdk-url }}
+        SDK_ID: ${{ steps.sdk-info.outputs.sdk-id }}
         TARGET_TRIPLE: ${{ inputs.target-triple }}
       
 branding:
