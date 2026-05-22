@@ -10,9 +10,9 @@ This action downloads the appropriate Swift Android SDK for the version of Swift
 
 ## Input Parameters
 
-| Name            | Required | Description                                                  | Format            |
-| --------------- | -------- | ------------------------------------------------------------ | ----------------- |
-| `target-triple` | Yes      | The target triple that will be used when building the Swift package. This is needed during the SDK setup process. | `true` or `false` |
+| Name            | Required | Description                                                  |
+| --------------- | :------: | ------------------------------------------------------------ |
+| `target-triple` |   Yes    | The target triple that will be used when building the Swift package. This is needed during the SDK setup process. |
 
 ## Output Parameters
 
