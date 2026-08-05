@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# setup-sdk.sh
+# sdk-setup.sh
 # setup-swift-android-sdk • https://github.com/orchetect/setup-swift-android-sdk
 # © 2026 Steffan Andrews • Licensed under MIT Licens
 
