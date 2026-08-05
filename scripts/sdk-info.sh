@@ -48,6 +48,6 @@ echo "SDK URL: $SDK_URL"
 echo "SDK checksum: $SDK_CHECKSUM"
 
 # Set output variables.
-echo "sdk-id=$(echo $SDK_ID)" >> $GITHUB_OUTPUT
-echo "sdk-url=$(echo $SDK_URL)" >> $GITHUB_OUTPUT
-echo "sdk-checksum=$(echo $SDK_CHECKSUM)" >> $GITHUB_OUTPUT
+echo "id=$(echo $SDK_ID)" >> $GITHUB_OUTPUT
+echo "url=$(echo $SDK_URL)" >> $GITHUB_OUTPUT
+echo "checksum=$(echo $SDK_CHECKSUM)" >> $GITHUB_OUTPUT
