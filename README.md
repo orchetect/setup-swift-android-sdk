@@ -16,7 +16,11 @@ This action downloads the appropriate Swift Android SDK for the version of Swift
 
 ## Output Parameters
 
-The action does not output any parameters.
+The action outputs the following parameters:
+
+| Name | Description | Example                       |
+| ---- | ----------- | ----------------------------- |
+| `id` | SDK ID      | `swift-6.3.3-RELEASE_android` |
 
 ## Usage
 
@@ -32,7 +36,9 @@ jobs:
       with:
         target-triple: ${{ env.TARGET_TRIPLE }}
     - name: Build Package
-    - run: swift build --swift-sdk "$TARGET_TRIPLE" --static-swift-stdlib
+      run: swift build --swift-sdk "$SDK_ID" --triple "$TARGET_TRIPLE"
+      env:
+        SDK_ID: ${{ steps.sdk-setup.outputs.id }}
 ```
 
 ## Documentation
