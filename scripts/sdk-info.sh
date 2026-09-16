@@ -38,8 +38,13 @@ case $SWIFT_VERSION in
     SDK_ID="swift-6.3.3-RELEASE_android"
     SDK_URL="https://download.swift.org/swift-6.3.3-release/android-sdk/swift-6.3.3-RELEASE/swift-6.3.3-RELEASE_android.artifactbundle.tar.gz"
     SDK_CHECKSUM="d160cc3206dd1886dae3fef2337af5e25ec034692cd0ec225721c56cc69da7f5" ;;
+  6.4 | 6.4.0)
+    SDK_ID="swift-6.4.0-RELEASE_android"
+    SDK_URL="https://download.swift.org/swift-6.4.0-release/android-sdk/swift-6.4.0-RELEASE/swift-6.4.0-RELEASE_android.artifactbundle.tar.gz"
+    SDK_CHECKSUM="21fb555122a3d801ad943d48df7ebffdd8824de61c25c180bb792d3edaee0b43" ;;
   *)
-    echo "⛔️ Error: Unhandled Swift version: $SWIFT_VERSION. Please update script with URL and checksum for this version."; exit 1 ;;
+    echo "⛔️ Error: Unhandled Swift version: $SWIFT_VERSION. Please update script with URL and checksum for this version."
+    exit 1 ;;
 esac
 
 # Output diagnostic info.
