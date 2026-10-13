@@ -19,6 +19,7 @@ if [ -z $SWIFT_VERSION ]; then echo "⛔️ Error: Swift version is empty."; exi
 echo "Using Swift version $SWIFT_VERSION"
 
 # Determine parameters for the given Swift version.
+# Data taken from: https://www.swift.org/install/linux/
 # These values are hard-coded here, as there is no viable way to retrieve historical data from Swift's server at this time. 
 # Hopefully it's possible in future.
 case $SWIFT_VERSION in
@@ -42,6 +43,10 @@ case $SWIFT_VERSION in
     SDK_ID="swift-6.4.0-RELEASE_android"
     SDK_URL="https://download.swift.org/swift-6.4.0-release/android-sdk/swift-6.4.0-RELEASE/swift-6.4.0-RELEASE_android.artifactbundle.tar.gz"
     SDK_CHECKSUM="21fb555122a3d801ad943d48df7ebffdd8824de61c25c180bb792d3edaee0b43" ;;
+  6.4.1)
+    SDK_ID="swift-6.4.1-RELEASE_android"
+    SDK_URL="https://download.swift.org/swift-6.4.1-release/android-sdk/swift-6.4.1-RELEASE/swift-6.4.1-RELEASE_android.artifactbundle.tar.gz"
+    SDK_CHECKSUM="a356b79f8f1daa6ae3a66f4c556966ca20c0208b3659805cf30a83a0a31d6772" ;;
   *)
     echo "⛔️ Error: Unhandled Swift version: $SWIFT_VERSION. Please update script with URL and checksum for this version."
     exit 1 ;;
